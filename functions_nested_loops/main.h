@@ -1,6 +1,6 @@
 #ifndef _PUTCHAR
 #define _PUTCHAR
 
-int _putchar(char* str);
+int _putchar(int a);
 
 #endif
