@@ -16,7 +16,6 @@ int print_alphabet_x10(void)
 
 		for (i = 0; i < 26; i++)
 			_putchar('a' + i);
-		
 		_putchar('\n');
 		count++;
 	}
