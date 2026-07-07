@@ -5,7 +5,7 @@
  *
  * return: void always
  */
-void print_alphabet(void)
+int print_alphabet(void)
 {
 	int i = 97;
 
@@ -13,5 +13,5 @@ void print_alphabet(void)
 		_putchar(i++);
 	_putchar(10);
 
-	return;
+	return (0);
 }
