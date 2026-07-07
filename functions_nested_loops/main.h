@@ -60,3 +60,10 @@ int print_last_digit(int n);
 int jack_bauer(void);
 
 #endif
+
+#ifndef TIMES_TABLE
+#define TIMES_TABLE
+
+int times_table(void);
+
+#endif

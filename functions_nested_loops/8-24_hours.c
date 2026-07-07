@@ -12,6 +12,7 @@ int jack_bauer(void)
 	while (h < 24)
 	{
 		int m = 0;
+
 		while (m < 60)
 		{
 			int th = (h - (h % 10)) / 10;
