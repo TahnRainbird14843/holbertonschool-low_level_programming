@@ -67,3 +67,17 @@ int jack_bauer(void);
 int times_table(void);
 
 #endif
+
+#ifndef ADD
+#define ADD
+
+int add(int a, int b);
+
+#endif
+
+#ifndef PRINT_TO_98
+#define PRINT_TO_98
+
+int print_to_98(int n);
+
+#endif
