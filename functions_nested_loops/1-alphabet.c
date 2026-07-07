@@ -1,13 +1,17 @@
 #include "main.h"
 
 /**
- * main - print the alphabet using print_alphabet
+ * print_alphabet - prints the alphabet in lower case
  *
- * Return: 0 always
+ * return: void always
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	int i = 97;
 
-	return (0);
+	while (i < 123)
+		_putchar(i++);
+	_putchar(10);
+
+	return;
 }

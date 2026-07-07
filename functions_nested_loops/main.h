@@ -1,7 +1,12 @@
 #ifndef _PUTCHAR
 #define _PUTCHAR
 
-int _putchar(int a);
+int _putchar(int x);
+
+#endif
+
+#ifndef PRINT_ALPHABET
+#define PRINT_ALPHABET
 
 void print_alphabet(void);
 
