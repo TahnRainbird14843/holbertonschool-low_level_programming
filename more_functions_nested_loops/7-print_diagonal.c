@@ -26,4 +26,6 @@ int print_diagonal(int n)
 			lines++;
 		}
 	}
+
+	return (0);
 }
