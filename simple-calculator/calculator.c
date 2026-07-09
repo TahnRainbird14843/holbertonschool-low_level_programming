@@ -4,9 +4,8 @@
 /**
  * main - entry point for a simple calculator
  *
- * Description: This calculator has functionality for
- * addition, subtraction, multiplication, and division
- * but only supports expected integer inputs.
+ * Description: This calculator has functionality for addition, subtraction, 
+ * multiplication, and division but only supports expected integer inputs.
  *
  * Return: 0 always
  */
@@ -19,7 +18,7 @@ int main(void)
 	{
 		print_menu();
 		scanf("%d", &n);
-
+		
 		if (n == 0)
 		{
 			printf("Bye!\n");
