@@ -2,6 +2,105 @@
 #include "main.h"
 
 /**
+ * print_menu - prints the calculator menu
+ *
+ * Return: 0 always
+ */
+int print_menu(void)
+{
+        printf("Simple Calculator\n1) Add\n2) Subtract\n"
+                "3) Multiply\n4) Divide\n0) Quit\nChoice: ");
+
+        return (0);
+}
+
+/**
+ * add - adds two input integers
+ *
+ * Return: 0 always
+ */
+int add(void)
+{
+        int a;
+        int b;
+
+        printf("A: ");
+        scanf("%d", &a);
+        printf("B: ");
+        scanf("%d", &b);
+
+        printf("Result: %d\n", a + b);
+
+        return (0);
+}
+
+/**
+ * subtract - subtracts two input integers
+ *
+ * Return: 0 always
+ */
+int subtract(void)
+{
+        int a;
+        int b;
+
+        printf("A: ");
+        scanf("%d", &a);
+        printf("B: ");
+        scanf("%d", &b);
+
+        printf("Result: %d\n", a - b);
+
+        return (0);
+}
+
+/**
+ * multiply - adds two input integers
+ *
+ * Return: 0 always
+ */
+int multiply(void)
+{
+        int a;
+        int b;
+
+        printf("A: ");
+        scanf("%d", &a);
+        printf("B: ");
+        scanf("%d", &b);
+
+        printf("Result: %d\n", a * b);
+
+        return (0);
+}
+
+/**
+ * divide - adds two input integers
+ *
+ * Return: 0 always
+ */
+int divide(void)
+{
+        int a;
+        int b;
+
+        printf("A: ");
+        scanf("%d", &a);
+        printf("B: ");
+        scanf("%d", &b);
+
+        if (b != 0)
+                printf("Result: %d\n", a / b);
+        else
+        {
+                printf("Error: division by zero\n");
+                divide();
+        }
+
+        return (0);
+}
+
+/**
  * main - entry point for a simple calculator
  *
  * Description: This calculator has functionality for addition, subtraction,
