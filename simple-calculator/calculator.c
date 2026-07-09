@@ -23,11 +23,17 @@ int add(void)
 {
         int a;
         int b;
+	int addvalid_a;
+        int addvalid_b;
 
         printf("A: ");
-        scanf("%d", &a);
+        addvalid_a = scanf("%d", &a);
+        if (check_input(addvalid_a) == 0)
+                add();
         printf("B: ");
-        scanf("%d", &b);
+        addvalid_b = scanf("%d", &b);
+        if (check_input(addvalid_b) == 0)
+                add();
 
         printf("Result: %d\n", a + b);
 
@@ -43,11 +49,17 @@ int subtract(void)
 {
         int a;
         int b;
+	int subvalid_a;
+        int subvalid_b;
 
         printf("A: ");
-        scanf("%d", &a);
+        subvalid_a = scanf("%d", &a);
+        if (check_input(subvalid_a) == 0)
+                subtract();
         printf("B: ");
-        scanf("%d", &b);
+        subvalid_b = scanf("%d", &b);
+        if (check_input(subvalid_b) == 0)
+                subtract();
 
         printf("Result: %d\n", a - b);
 
@@ -63,11 +75,17 @@ int multiply(void)
 {
         int a;
         int b;
-
-        printf("A: ");
-        scanf("%d", &a);
-        printf("B: ");
-        scanf("%d", &b);
+	int mulvalid_a;
+	int mulvalid_b;
+	
+	printf("A: ");
+	mulvalid_a = scanf("%d", &a);
+	if (check_input(mulvalid_a) == 0)
+		multiply();
+	printf("B: ");
+	mulvalid_b = scanf("%d", &b);
+	if (check_input(mulvalid_b) == 0)
+		multiply();
 
         printf("Result: %d\n", a * b);
 
@@ -83,21 +101,44 @@ int divide(void)
 {
         int a;
         int b;
+	int divvalid_a;
+	int divvalid_b;
 
-        printf("A: ");
-        scanf("%d", &a);
+	printf("A: ");
+        divvalid_a = scanf("%d", &a);
+	if (check_input(divvalid_a) == 0)
+		divide();
         printf("B: ");
-        scanf("%d", &b);
+        divvalid_b = scanf("%d", &b);
+	if (check_input(divvalid_b) == 0)
+		divide();
 
         if (b != 0)
                 printf("Result: %d\n", a / b);
-        else
+        if (b == 0)
         {
                 printf("Error: division by zero\n");
                 divide();
         }
 
         return (0);
+}
+
+/**
+ * check_input - checks if the input is a valid integer
+ *
+ * Return: 0 always
+ */
+int check_input(int n)
+{
+	if (n == 0)
+	{
+		while (getchar() != '\n');
+		printf("Invalid input\n");
+		return (0);
+	}
+	else
+		return (1);
 }
 
 /**
@@ -112,13 +153,20 @@ int main(void)
 {
 	int run = 1;
 	int n;
+	int valid;
 
 	while (run == 1)
 	{
 		print_menu();
-		scanf("%d", &n);
+		valid = scanf("%d", &n);
 
-		if (n == 0)
+		if (valid == 0)
+		{
+			while(getchar() != '\n');
+			printf("Invalid choice\n");
+			main();
+		}
+		else if (n == 0)
 		{
 			printf("Bye!\n");
 			run = 0;
