@@ -10,7 +10,7 @@ int add(void)
 {
 	int a;
 	int b;
-	
+
 	printf("A: ");
 	scanf("%d", &a);
 	printf("B: ");
