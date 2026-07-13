@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * atoi - takes a string and converts it to a signed integer
+ * _atoi - takes a string and converts it to a signed integer
  * @s: input string
  *
  * Return: converted number
