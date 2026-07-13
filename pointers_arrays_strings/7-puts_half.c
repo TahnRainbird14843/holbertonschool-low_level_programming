@@ -9,11 +9,10 @@
 int puts_half(char *s)
 {
 	int len = 0;
+	int i;
 
 	while (s[len] != '\0')
 		len++;
-
-	int i;
 
 	for (i = len / 2; i <= len; i++)
 		_putchar(s[i]);
