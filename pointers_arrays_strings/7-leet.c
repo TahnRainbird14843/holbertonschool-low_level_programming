@@ -10,6 +10,8 @@ char *leet(char *str)
 {
 	int base_arr[10];
 	int leet_arr[10];
+	int i = 0;
+	int j;
 
 	base_arr[0] = 'a';
 	base_arr[1] = 'A';
@@ -32,9 +34,6 @@ char *leet(char *str)
 	leet_arr[7] = '7';
 	leet_arr[8] = '1';
 	leet_arr[9] = '1';
-
-	int i = 0;
-	int j;
 
 	while (str[i] != '\0')
 	{
