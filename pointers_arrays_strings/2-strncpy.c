@@ -6,7 +6,7 @@
  * @str: string to be copied
  * @n: number of times
  *
- * Result: pointer to destination
+ * Return: pointer to destination
  */
 char *_strncpy(char *dest, char *str, int n)
 {
