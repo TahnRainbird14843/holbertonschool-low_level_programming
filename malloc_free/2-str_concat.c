@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 /**
  * str_concat - points to new string which is the concatenation of the inputs
@@ -15,9 +13,15 @@ char *str_concat(char *str1, char *str2)
 	char *out;
 	int i = 0;
 	int j = 0;
-	int len = strlen(str1) + strlen(str2);
+	int len1 = 0;
+	int len2 = 0;
 
-	out = malloc(len * sizeof(char));
+	while (str1[len1] != '\0')
+		len1++;
+	while (str2[len2] != '\0')
+		len2++;
+
+	out = malloc((len1 + len2) * sizeof(char));
 
 	while (str1[i] != '\0' && str1 != NULL)
 	{
