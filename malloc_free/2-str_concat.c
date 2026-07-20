@@ -16,29 +16,36 @@ char *str_concat(char *str1, char *str2)
 	int len1 = 0;
 	int len2 = 0;
 
-	while (str1[len1] != '\0')
-		len1++;
-	while (str2[len2] != '\0')
-		len2++;
+	if (str1 != NULL)
+	{
+		while (str1[len1] != '\0')
+			len1++;
+	}
+	if (str2 != NULL)
+	{
+		while (str2[len2] != '\0')
+			len2++;
+	}
+
+	if (str1 == NULL && str2 == NULL)
+		return (NULL);
 
 	out = malloc((len1 + len2) * sizeof(char) + 1);
 
-	while (str1[i] != '\0' && str1 != NULL)
+	if (out == NULL)
+		return (NULL);
+
+	while (i < len1)
 	{
 		out[i] = str1[i];
 		i++;
 	}
-
-	while (str2[j] != '\0' && str2 != NULL)
+	while (j < len2)
 	{
 		out[i + j] = str2[j];
 		j++;
 	}
-
 	out[i + j] = '\0';
-	
-	if (str1 == NULL && str2 == NULL)
-		return (NULL);
 
 	return (out);
 }
