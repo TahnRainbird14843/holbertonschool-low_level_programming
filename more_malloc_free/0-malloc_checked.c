@@ -2,15 +2,22 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - checks if a memory allocation is valid and returns its address
- * @b: size of memory allocation
+ * malloc_checked - checks if a memory allocation valid and returns its address
+ * @n: size of memory allocation
  *
  * Return: pointer to memory, 98 if failed.
  */
 void *malloc_checked(unsigned int n)
 {
-	if (n == 0 || malloc(n) == NULL)
+	void *ptr;
+
+	if (n == 0)
 		exit(98);
-	else
-		return(malloc(n));
+
+	ptr = malloc(n);
+
+	if (ptr == NULL)
+		exit(98);
+
+	return (ptr);
 }
