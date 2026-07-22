@@ -9,8 +9,13 @@
  */
 int free_dog(dog_t *d)
 {
-	free(d->name);
-	free(d->owner);
+	if (dog_t == NULL)
+		return (0);
+	
+	if (d->name != NULL)
+		free(d->name);
+	if (d->owner != NULL)
+		free(d->owner);
 	free(d);
 
 	return (0);

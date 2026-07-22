@@ -16,7 +16,7 @@ char *alloc_ptr(char *ptr)
 	if (ptr == NULL)
 		return (NULL);
 
-	while (new_ptr[len] != '\0')
+	while (ptr[len] != '\0')
 		len++;
 
 	new_ptr = malloc(len + 1);
