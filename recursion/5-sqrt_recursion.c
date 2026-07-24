@@ -13,12 +13,12 @@ int guessing(int n, int guess)
 
 	if (guess * guess == n)
 		return (guess);
-	if (new_guess * new_guess == n)
+	else if (new_guess * new_guess == n)
 		return (new_guess);
-	if (guess - new_guess <= 1 && new_guess - guess <= 1)
+	else if (guess - new_guess <= 1 && new_guess - guess <= 1)
 		return (-1);
-
-	guessing(n, new_guess);
+	else
+		return (guessing(n, new_guess));
 }
 
 /**
